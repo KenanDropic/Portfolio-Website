@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Portfolio Website</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- HOME PAGE -->
+      <section class="landing-page">
+        <header class="header" id="header">
+          <div class="logo"><img src="" alt="" class="logo-img" />KD</div>
+          <!-- DESKTOP NAV  -->
+          <ul class="nav-list">
+            <li data-aos="fade-down" data-aos-delay="200">
+              <a class="hover" href="#about">01.About</a>
+            </li>
+            <li class="hover" data-aos="fade-down" data-aos-delay="350">
+              <a href="#services">02.Services</a>
+            </li>
+            <li class="hover" data-aos="fade-down" data-aos-delay="500">
+              <a href="#work">03.Work</a>
+            </li>
+            <li class="hover" data-aos="fade-down" data-aos-delay="650">
+              <a href="#contact">04.Contact</a>
+            </li>
+          </ul>
+          <!-- MOBILE PHONE NAV -->
+          <div class="phone-nav">
+            <span class="slide">
+              <a class="toggle-nav" id="openSlide">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+
+            <div id="menu" class="nav">
+              <a href="#">Home</a>
+              <a href="#about">About</a>
+              <a href="#services">Services</a>
+              <a href="#work">Projects</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="message-container">
+          <p class="hi" id="hi"></p>
+          <p class="name" id="name"></p>
+          <p class="tag-line" id="tag-line"></p>
+        </div>
+
+        <div class="social-container" data-aos="fade-right">
+          <ul class="social-list">
+            <li class="social" data-aos="fade-down-right" data-aos-delay="50">
+              <a
+                href="https://stackoverflow.com/users/15471015/kenandvlpr"
+                target="_blank"
+                ><i class="fab fa-stack-overflow"></i
+              ></a>
+            </li>
+            <li class="social" data-aos="fade-down-right" data-aos-delay="150">
+              <a href="https://www.instagram.com/keno.plp/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li class="social" data-aos="fade-down-right" data-aos-delay="250">
+              <a href="https://github.com/KenanDVLPR" target="_blank">
+                <i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li class="social" data-aos="fade-down-right" data-aos-delay="350">
+              <a
+                href="https://www.youtube.com/channel/UCdKu31ijNqs-vfriuc_1Ksg"
+                target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+            <li class="social" data-aos="fade-down-right" data-aos-delay="450">
+              <a href="" target="_blank"><i class="fa fa-at"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mail-line">
+          <span class="mail-text">dropic5@hotmail.com</span>
+        </div>
+      </section>
+
+      <!-- ABOUT ME PAGE -->
+      <section class="about" id="about">
+        <h2 data-aos="fade-left">
+          02. About me
+          <div class="about-line"></div>
+        </h2>
+        <div class="row mt-5" id="page">
+          <!-- <div class="about-line2"></div> -->
+          <div
+            class="info col-sm-12 col-xs-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9"
+          >
+            <div
+              class="animation-text"
+              data-aos="fade-right"
+              data-aos-delay="600"
+            >
+              <span class="part-one">JUNIOR</span>
+              <span class="part-two"> FULL STACK WEB DEVELOPER</span>
+            </div>
+            <p class="text" data-aos="fade-left" data-aos-delay="800">
+              Hi,my name is Kenan Dropić.Inspired by technology I fell in love
+              with programming. That is the reason I am currently studying
+              Software engineering,second year,in Tuzla. My love and focus are
+              directed towards Web Development,but I know a lot of C++ and a
+              little less of C,also. <br /><br />
+              My aim is to master the front-end and then expand knowledge with
+              the back-end. I am fueled by my passion for understanding the
+              complexity of programming and problem solving. Truly, I consider
+              myself a 'forever student',eager to build up on my current
+              knowledge.
+              <br /><br />
+              As a person, I am very organized, and pay much attention to
+              details when working on a project.
+            </p>
+          </div>
+          <div
+            class="picture-container col-md-3 col-lg-3 col-xl-3 col-xxl-3"
+            data-aos="zoom-in"
+            data-aos-delay="750"
+          >
+            <div class="picture">
+              <img src="/assets/me.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES  PAGE -->
+      <section class="service-work" id="services">
+        <h2 data-aos="fade-right">
+          <div class="service-line"></div>
+          Services 03.
+        </h2>
+
+        <div class="services">
+          <div class="service" data-aos="zoom-in" data-aos-delay="150">
+            <h3>Tailored to your needs</h3>
+            <i class="fa fa-paint-roller" id="icon"></i>
+          </div>
+          <div class="service" data-aos="zoom-in" data-aos-delay="300">
+            <h3>Problem solving</h3>
+            <i class="fa fa-lightbulb" id="icon"></i>
+          </div>
+          <div class="service" data-aos="zoom-in" data-aos-delay="450">
+            <h3>Pixel perfect code</h3>
+            <i class="fa fa-code" id="icon"></i>
+          </div>
+          <div class="service" data-aos="zoom-in" data-aos-delay="600">
+            <h3>Built with love</h3>
+            <i class="fa fa-heart" id="icon"></i>
+          </div>
+        </div>
+        <div class="skills">
+          <button class="btn-shine">Most Used Technologies</button>
+          <div class="tech-skills">
+            <div class="skill" data-aos="zoom-in-left" data-aos-delay="850">
+              <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill" data-aos="zoom-in-left" data-aos-delay="700">
+              <i class="fab fa-css3"></i>
+            </div>
+            <div class="skill" data-aos="zoom-in-left" data-aos-delay="550">
+              <i class="fab fa-js"></i>
+            </div>
+            <div class="skill" data-aos="zoom-in-left" data-aos-delay="400">
+              <i class="fab fa-react"></i>
+            </div>
+            <div class="skill" data-aos="zoom-in-left" data-aos-delay="250">
+              <i class="fa fa-database"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS - PAGE  -->
+      <section class="work" id="work">
+        <h2 data-aos="fade-right" data-aos-delay="100">
+          04. Projects
+          <div class="work-line"></div>
+        </h2>
+        <div class="work-line2"></div>
+
+        <div class="project" data-aos="fade-left" data-aos-delay="300">
+          <div class="img-container">
+            <img src="/assets/project1.jpg" alt="" />
+          </div>
+          <div class="project-name-reserve">Crypto Conversion Calculator</div>
+          <div class="project-info">
+            <div class="project-name">Crypto Conversion Calculator</div>
+
+            <div class="project-description">
+              Crypto conversion calculator,convert crypto values into valute of
+              specific country(if country valute is available).Choose date,on
+              which you want to see a value of specific valute. Calculation is
+              done for you!
+            </div>
+            <div>
+              <ul class="techs">
+                <li class="tech">HTML & CSS</li>
+                <li class="tech">Javascript ES6+</li>
+                <li class="tech">Boostrap</li>
+                <li class="tech">Open Source API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="project" data-aos="fade-right" data-aos-delay="600">
+          <div class="project-name-reserve">Crypto Conversion Calculator</div>
+          <div class="project-info">
+            <div class="project-name2">Trade Shop</div>
+
+            <div class="project-description2">
+              Weather application. Applicaton fetches data from OpenWeather
+              API,and based on fetched data we get valid informations of wanted
+              cities. Fetched informations are display in UI,which is generated
+              through Javascript. If we make a get request with city/country
+              that doesn't exist,we will get popup that says exactly that.
+            </div>
+            <div>
+              <ul class="techs2">
+                <li class="tech">HTML & CSS</li>
+                <li class="tech">Javascript ES6+</li>
+                <li class="tech">Open Source API</li>
+                <li class="tech">Local Storage</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="img-container">
+            <img src="/assets/tradeshop.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="project" data-aos="fade-left" data-aos-delay="900">
+          <div class="img-container">
+            <img src="/assets/git_find.jpg" alt="" />
+          </div>
+          <div class="project-name-reserve">Crypto Conversion Calculator</div>
+
+          <div class="project-info">
+            <div class="project-name3">Find Github Users</div>
+
+            <div class="project-description3">
+              As the name says,this application helps you search users on
+              Github. Not only you will get searched user,but also you will get
+              some basic personal informations about user and his repos. API
+              used in this project is actually Github API,that can be found on
+              official site of Github.
+            </div>
+            <div>
+              <ul class="techs">
+                <li class="tech">HTML & CSS</li>
+                <li class="tech">Javascript ES6+</li>
+                <li class="tech">Open Source API</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT  -->
+      <section class="contact" id="contact">
+        <h2 data-aos="zoom-in" data-aos-delay="100">
+          <div class="contact-line1"></div>
+          CONTACT
+          <div class="contact-line2"></div>
+        </h2>
+        <h2 class="get">GET IN TOUCH</h2>
+        <!-- <form
+          action="https://formsubmit.co/689938e29b360a600687f692681eb8b5"
+          id="form"
+          method="POST"
+        >
+          <div class="form-control">
+            <input
+              autocomplete="off"
+              type="text"
+              id="first-name"
+              required
+              placeholder="First name"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              autocomplete="off"
+              type="text"
+              id="last-name"
+              required
+              placeholder="Last name"
+            />
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="E-mail"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-control">
+            <textarea
+              form="form"
+              id="textarea"
+              placeholder="Share your thoughts"
+            ></textarea>
+          </div>
+          <button class="btn" id="hello" type="submit">Say Hello</button>
+        </form> -->
+        <span class="author">Designed and Created by Kenan Dropic</span>
+      </section>
+    </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: "aos-init", // class applied after initialization
+        animatedClassName: "aos-animate", // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        // debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        // throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        // delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 500, // values from 0 to 3000, with step 50ms
+        easing: "ease", // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
