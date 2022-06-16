@@ -2,40 +2,67 @@ const msg = document.getElementById("hi");
 const msgName = document.getElementById("name");
 const msgTagLine = document.getElementById("tag-line");
 
-const nav = document.getElementById("nav");
 const header = document.getElementById("header");
-const formEl = document.getElementById("form");
 const mainContainer = document.querySelector(".main-container");
 const projects = document.querySelectorAll(".project .img-container");
 const socials = document.querySelectorAll(".social i");
 
 const menu = document.getElementById("menu");
-const openSlide = document.getElementById("openSlide");
-const open_i = document.querySelector(".toggle-nav i");
-const nav_links = document.querySelectorAll(".nav a");
+const show_slide = document.getElementById("show-slide");
+const close_slide = document.getElementById("close-slide");
 
-openSlide.addEventListener("click", () => {
-  if (open_i.className === "fas fa-times") {
-    open_i.className = "fas fa-bars";
-    menu.style.width = "0px";
-    mainContainer.classList.remove("active");
-    document.body.style.position = "";
-    document.body.style.top = "";
-    window.scrollTo(0, parseInt(document.body.style.top) * -1);
-  } else {
-    mainContainer.classList.add("active");
-    document.body.style.top = `-${window.scrollY}px`;
-    document.body.style.position = "fixed";
-    open_i.className = "fas fa-times";
-    menu.style.width = "250px";
-  }
+const nav_links = document.querySelectorAll(".phone-nav-links a");
+
+const frontendToggle = document.getElementById("frontend");
+const frontendSkills = document.querySelector(".frontend-skills");
+const backendToggle = document.getElementById("backend");
+const backendSkills = document.querySelector(".backend-skills");
+
+import { init } from "../utils/initAOS.js";
+
+window.addEventListener("load", () => {
+  const initializing = init;
+});
+
+let topH;
+
+// show slide
+show_slide.addEventListener("click", (e) => {
+  show_slide.classList.remove("active");
+  close_slide.classList.add("active");
+  menu.style.width = "250px";
+  mainContainer.classList.add("active");
+  document.body.style.position = "fixed";
+  mainContainer.style.top = `-${window.scrollY}px`;
+  // init;
+  console.log("Scroll height", topH);
+});
+
+window.addEventListener("scroll", (e) => {
+  // console.log(window.scrollY);
+  topH = window.scrollY;
+});
+
+// close slide
+close_slide.addEventListener("click", () => {
+  mainContainer.classList.remove("active");
+  show_slide.classList.add("active");
+  close_slide.classList.remove("active");
+  menu.style.width = "0px";
+  window.scrollTo(0, parseInt(mainContainer.style.top) * -1);
+  mainContainer.style.position = "relative";
+  mainContainer.style.top = "";
 });
 
 nav_links.forEach((link) => {
   link.addEventListener("click", () => {
     menu.style.width = "0px";
-    open_i.className = "fas fa-bars";
     mainContainer.classList.remove("active");
+    mainContainer.style.position = "relative";
+    mainContainer.style.top = "";
+    window.scrollTo(0, parseInt(document.body.style.top) * -1);
+    close_slide.classList.remove("active");
+    show_slide.classList.add("active");
   });
 });
 
@@ -97,8 +124,13 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
-formEl.addEventListener("submit", (e) => {
-  alert("Thanks for Emailing me! I will reply as soon as possible :)");
+// toggle frontend skills
+frontendToggle.addEventListener("click", () => {
+  frontendSkills.classList.toggle("active");
+});
+// toggle backend skills
+backendToggle.addEventListener("click", () => {
+  backendSkills.classList.toggle("active");
 });
 
 // mainContainer.addEventListener("scroll", (e) => {
