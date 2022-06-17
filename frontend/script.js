@@ -1,3 +1,5 @@
+import { init } from "../utils/initAOS.js";
+
 const msg = document.getElementById("hi");
 const msgName = document.getElementById("name");
 const msgTagLine = document.getElementById("tag-line");
@@ -5,7 +7,6 @@ const msgTagLine = document.getElementById("tag-line");
 const header = document.getElementById("header");
 const mainContainer = document.querySelector(".main-container");
 const projects = document.querySelectorAll(".project .img-container");
-const socials = document.querySelectorAll(".social i");
 
 const menu = document.getElementById("menu");
 const show_slide = document.getElementById("show-slide");
@@ -18,10 +19,11 @@ const frontendSkills = document.querySelector(".frontend-skills");
 const backendToggle = document.getElementById("backend");
 const backendSkills = document.querySelector(".backend-skills");
 
-import { init } from "../utils/initAOS.js";
+const resume = document.querySelector(".resume-button");
 
 window.addEventListener("load", () => {
   const initializing = init;
+  resume.classList.remove("active");
 });
 
 let topH;
@@ -90,7 +92,11 @@ setTimeout(() => {
 setTimeout(() => {
   printLetterByLetter(msgTagLine, tagLine, 200);
 }, 6000);
+setTimeout(() => {
+  resume.classList.add("active");
+}, 10500);
 
+//
 projects.forEach((project) => {
   project.addEventListener("click", (e) => {
     if (project.classList.contains("first")) {
@@ -104,6 +110,7 @@ projects.forEach((project) => {
     }
   });
 });
+
 window.addEventListener("scroll", (e) => {
   let scrollTop = document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
@@ -132,36 +139,3 @@ frontendToggle.addEventListener("click", () => {
 backendToggle.addEventListener("click", () => {
   backendSkills.classList.toggle("active");
 });
-
-// mainContainer.addEventListener("scroll", (e) => {
-//   let scrollTop = mainContainer.scrollTop;
-//   if (scrollTop > lastScrollTop) {
-//     header.style.top = `${-71}px`;
-//     header.style.zIndex = "0";
-//   } else {
-//     header.style.boxShadow = "0 4px 15px 5px var(--navy-shadow)";
-//     header.style.backgroundColor = "rgb(10,25,47)";
-//     header.style.top = `${0}px`;
-//     header.style.zIndex = "1000";
-//   }
-//   lastScrollTop = scrollTop;
-
-//   if (lastScrollTop == 0) {
-//     header.style.backgroundColor = "none";
-//     header.style.boxShadow = "none";
-//     header.style.zIndex = `${1}`;
-//   }
-// });
-
-// function writeText() {
-//   msg.innerText = text.slice(0, idx);
-
-//   //odsijecamo text od 0 do trenutno indexa. Prvobitno će to biti od 0 do 1,znači uzet će se prvo slovo,zatim uvećamo index i kroz setTimeout pozovemo f-iju nakon 250ms,sada će se odsijeći text od 0 do 2,itd... Sve dok je idx manji od dužine texta,to će se i izvršavati,nakon toga očistimo setTimeout i ne izvršava se više.
-//   idx++;
-//   const animatxedTxt = setTimeout(writeText, 250);
-//   if (idx > text.length) {
-//     idx = 1;
-//     clearTimeout(animatxedTxt);
-//   }
-// }
-// setTimeout(writeText, 1000);

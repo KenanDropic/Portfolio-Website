@@ -100,6 +100,7 @@ body {
 .header {
   border: none;
   width: 100%;
+  height: 70px;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -175,9 +176,34 @@ body {
   display: flex;
   flex-direction: column;
 }
+.resume-button{
+  cursor: pointer;
+  width: 130px;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid var(--green);
+  transform: translateX(-500%);
+}
+.resume-button.active {
+  transform: translateX(0%);
+  transition: all 0.6s ease;
+}
+.resume{
+  color: var(--green);
+  font-family: inherit;
+  font-size: 18px;
+  text-decoration: none;
+  
+}
+.resume:hover{
+  text-decoration: none;
+  color: var(--green);
+}
 .hi {
   opacity: 1;
-  font-size: 20px;
+  font-size: 22px;
   color: var(--green);
 }
 .name {
@@ -506,7 +532,7 @@ body {
 }
 .skills-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .skl{
   position: relative;
@@ -515,6 +541,7 @@ body {
   align-items: center;
   justify-content: center;
   display: flex;
+  margin: 0px 15px;
 }
 
 .fr-sk-phone {
@@ -822,6 +849,22 @@ z-index: 100;
   font-size: 12px;
 }
 }
+@media (max-width:1200px) {
+  .hi{
+    font-size: 18px;
+  }
+  .name,.tag-line{
+    font-size: 60px;
+  }
+  .resume{
+    font-size: 16px;
+  }
+}
+@media (max-width:1000px) {
+  .name,.tag-line{
+    font-size: 50px;
+  }
+}
 @media (max-width: 820px) {
   .work{
     padding: 0px 50px;
@@ -874,8 +917,6 @@ z-index: 100;
     font-weight: bold;
     text-align: left;
   }
-  .techs {
-  }
   .icons-phone-view{
     display: flex;
   }
@@ -883,6 +924,9 @@ z-index: 100;
   /* SERIVCES */
  .divider{
   display: block;
+ }
+ .skl {
+  margin: 0px 5px;
  }
  .skills-container{
   justify-content: space-around;
@@ -900,13 +944,17 @@ z-index: 100;
   
 }
 @media (max-width: 760px) {
+  /* LANDING PAGE */
   .message-container{
     left: 5%;
     top: 40%;
     transform: translateY(-50%);
   }
+  .resume-button{
+    padding: 0.5rem 1rem;
+  }
   .name,.tag-line{
-    font-size: 40px !important;
+    font-size: 45px !important;
   }
   .social-container,.mail-line{
     display: none;
@@ -966,9 +1014,6 @@ z-index: 100;
   }
 }
 @media (max-width: 600px) {
-  .name,.tag-line{
-    font-size: 30px !important;
-  }
   .project {
     width: 100%;
   }
@@ -1003,7 +1048,10 @@ z-index: 100;
 }
 @media (max-width: 576px) {
   .name,.tag-line{
-    font-size: 25px !important;
+    font-size: 30px !important;
+  }
+  .resume-button{
+    padding: 0.3rem 1rem;
   }
   .msg {
     font-size: 22px;
@@ -1091,9 +1139,11 @@ z-index: 100;
     flex-direction: column;
     align-items: center;
   }
-  
 }
 @media (max-width: 426px) {
+  .name,.tag-line{
+    font-size: 25px !important;
+  }
   h2 {
     font-size: 20px;
   }
