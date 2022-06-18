@@ -44,16 +44,16 @@ function printLetterByLetter(destination, message, speed) {
     }
   }, speed);
 }
-printLetterByLetter(msg, text, 200);
+printLetterByLetter(msg, text, 100);
 setTimeout(() => {
-  printLetterByLetter(msgName, nameText, 210);
+  printLetterByLetter(msgName, nameText, 110);
+}, 1500);
+setTimeout(() => {
+  printLetterByLetter(msgTagLine, tagLine, 100);
 }, 3000);
 setTimeout(() => {
-  printLetterByLetter(msgTagLine, tagLine, 200);
-}, 6000);
-setTimeout(() => {
   resume.classList.add("active");
-}, 10500);
+}, 5300);
 
 // adding event listeners to each project
 projects.forEach((project) => {
