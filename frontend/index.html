@@ -114,7 +114,6 @@
           <div class="about-line"></div>
         </h2>
         <div class="row mt-5" id="page">
-          <!-- <div class="about-line2"></div> -->
           <div
             class="info col-sm-12 col-xs-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9"
           >
@@ -241,7 +240,7 @@
         <div class="work-line2"></div>
 
         <div class="project" data-aos="fade-left" data-aos-delay="300">
-          <div class="img-container">
+          <div class="img-container first">
             <img src="/frontend/assets/project1.jpg" alt="" />
           </div>
           <div class="project-info">
@@ -273,11 +272,9 @@
             <div class="project-name2">Trade Shop</div>
 
             <div class="project-description2">
-              Weather application. Applicaton fetches data from OpenWeather
-              API,and based on fetched data we get valid informations of wanted
-              cities. Fetched informations are display in UI,which is generated
-              through Javascript. If we make a get request with city/country
-              that doesn't exist,we will get popup that says exactly that.
+              E-commerce application. Application includes shopping cart and
+              implementation of PayPal API. For further experience check it out
+              on github or try it out on link below
             </div>
             <div class="techs-container mt-4">
               <ul class="techs2">
@@ -292,18 +289,18 @@
             </div>
           </div>
 
-          <div class="img-container">
+          <div class="img-container second">
             <img src="/frontend/assets/tradeshop.jpg" alt="" />
           </div>
         </div>
 
         <div class="project" data-aos="fade-left" data-aos-delay="900">
-          <div class="img-container">
+          <div class="img-container third">
             <img src="/frontend/assets/git_find.jpg" alt="" />
           </div>
 
           <div class="project-info">
-            <div class="project-name3">Real Estates</div>
+            <div class="project-name">Real Estates</div>
             <div class="project-description3">
               Application allows you to sell your real estates,buy real estate
               or rent. Create your account and get going!
@@ -343,6 +340,24 @@
       </section>
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script type="module" src="script.js"></script>
+    <script>
+      AOS.init({
+        // Global settings:
+        disable: false,
+        startEvent: "DOMContentLoaded",
+        initClassName: "aos-init",
+        animatedClassName: "aos-animate",
+        useClassNames: false,
+        disableMutationObserver: false,
+        offset: 120,
+        // delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 500,
+        easing: "ease",
+        once: false,
+        mirror: false,
+        anchorPlacement: "top-bottom",
+      });
+    </script>
+    <script src="script.js"></script>
   </body>
 </html>
