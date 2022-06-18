@@ -59,7 +59,7 @@ setTimeout(() => {
 projects.forEach((project) => {
   project.addEventListener("click", (e) => {
     if (project.classList.contains("first")) {
-      window.open("https://crypto11.netlify.app");
+      window.open("https://crypto-noke.netlify.app/");
     } else if (project.classList.contains("second")) {
       window.open("https://tradeshop-mern.herokuapp.com/");
     }
@@ -125,7 +125,7 @@ nav_links.forEach((link) => {
 externalLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {
     if (idx === 0) {
-      window.open("https://crypto11.netlify.app");
+      window.open("https://crypto-noke.netlify.app/");
     } else if (idx === 1) {
       window.open("https://tradeshop-mern.herokuapp.com/");
     } else if (idx === 2) {
