@@ -59,13 +59,12 @@ setTimeout(() => {
 projects.forEach((project) => {
   project.addEventListener("click", (e) => {
     if (project.classList.contains("first")) {
-      window.open("https://crypto-noke.netlify.app/");
+      window.open("https://crypto-keno.netlify.app/");
     } else if (project.classList.contains("second")) {
       window.open("https://tradeshop-mern.herokuapp.com/");
     }
     if (project.classList.contains("third")) {
-      // window.open("https://festive-cray-a36f31.netlify.app/");
-      console.log("TO DO - DEPLOY REAL-ESTATES APP");
+      window.open("https://real-estates-mern.herokuapp.com/");
     }
   });
 });
@@ -125,12 +124,11 @@ nav_links.forEach((link) => {
 externalLinks.forEach((link, idx) => {
   link.addEventListener("click", () => {
     if (idx === 0) {
-      window.open("https://crypto-noke.netlify.app/");
+      window.open("https://crypto-keno.netlify.app/");
     } else if (idx === 1) {
       window.open("https://tradeshop-mern.herokuapp.com/");
     } else if (idx === 2) {
-      // window.open("https://festive-cray-a36f31.netlify.app/");
-      console.log("TO DO - DEPLOY REAL-ESTATES APP");
+      window.open("https://real-estates-mern.herokuapp.com/");
     }
   });
 });
